@@ -1,0 +1,383 @@
+/* ============================================
+   VARIÁVEIS GLOBAIS (Tema do Servidor)
+   ============================================ */
+
+:root {
+    /* Cores principais */
+    --cor-fundo: #000000;
+    --cor-fundo-escuro: #00140D;
+    --cor-fundo-medio: #00251A;
+
+    /* Cores de destaque (vermelho) */
+    --cor-destaque: #F02D32;
+    --cor-destaque-escuro: #A91F25;
+
+    /* Cores de texto */
+    --cor-texto-claro: #FFF7DC;
+    --cor-texto-medio: #D8D1B8;
+
+    /* Cores neutras */
+    --cor-cinza: #181A18;
+
+    /* Bordas e sombras */
+    --borda-padrao: rgba(255, 247, 220, 0.08);
+    --borda-destaque: rgba(240, 45, 50, 0.25);
+    --sombra-padrao: 0 8px 30px rgba(0, 0, 0, 0.7);
+    --sombra-destaque: 0 6px 20px rgba(240, 45, 50, 0.35);
+}
+
+
+/* ============================================
+   RESET E BASE
+   ============================================ */
+
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+
+body {
+    background: var(--cor-fundo);
+    color: var(--cor-texto-claro);
+    font-family: 'Segoe UI', Arial, Helvetica, sans-serif;
+    min-height: 100vh;
+    line-height: 1.6;
+}
+
+
+/* ============================================
+   NAVBAR (Barra de Navegação)
+   ============================================ */
+
+.navbar {
+    background: rgba(0, 20, 13, 0.92);
+    width: calc(100% - 40px);
+    height: 80px;
+    padding: 15px 30px;
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+
+    position: fixed;
+    top: 20px;
+    left: 20px;
+    z-index: 1000;
+
+    border-radius: 12px;
+    border: 1px solid var(--borda-padrao);
+    box-shadow: var(--sombra-padrao), inset 0 0 20px rgba(0, 0, 0, 0.3);
+    backdrop-filter: blur(10px);
+}
+
+/* Grupo de links à esquerda */
+.navbar-esquerda {
+    display: flex;
+    align-items: center;
+    gap: 28px;
+}
+
+/* Grupo de links à direita */
+.navbar-direita {
+    display: flex;
+    align-items: center;
+    gap: 28px;
+}
+
+/* Links da navbar */
+.navbar a {
+    color: var(--cor-texto-claro);
+    text-decoration: none;
+    display: flex;
+    align-items: center;
+    gap: 8px;
+    font-size: 15px;
+    font-weight: 600;
+    transition: all 0.3s ease;
+    position: relative;
+}
+
+/* Linha de destaque no hover */
+.navbar a::after {
+    content: '';
+    position: absolute;
+    bottom: -4px;
+    left: 0;
+    width: 0;
+    height: 2px;
+    background: var(--cor-destaque);
+    transition: width 0.3s ease;
+}
+
+.navbar a:hover::after {
+    width: 100%;
+}
+
+.navbar a:hover {
+    color: var(--cor-destaque);
+    transform: translateY(-1px);
+}
+
+/* Ícones da navbar */
+.navbar i {
+    color: var(--cor-destaque);
+    font-size: 16px;
+    transition: all 0.3s ease;
+}
+
+.navbar a:hover i {
+    color: var(--cor-texto-claro);
+    transform: scale(1.15);
+}
+
+/* Link ativo (página atual) */
+.navbar a.ativo {
+    color: var(--cor-destaque);
+}
+
+.navbar a.ativo::after {
+    width: 100%;
+}
+
+/* Logo centralizado */
+.navbar-logo {
+    width: 55px;
+    height: 55px;
+    object-fit: contain;
+    position: absolute;
+    left: 50%;
+    transform: translateX(-50%);
+    filter: drop-shadow(0 0 8px rgba(240, 45, 50, 0.15));
+    transition: all 0.3s ease;
+}
+
+.navbar-logo:hover {
+    transform: translateX(-50%) scale(1.08);
+    filter: drop-shadow(0 0 12px rgba(240, 45, 50, 0.35));
+}
+
+/* Botão de login (destacado) */
+.navbar-direita .botao-login {
+    background: var(--cor-destaque);
+    color: var(--cor-texto-claro);
+    padding: 10px 18px;
+    border-radius: 6px;
+    box-shadow: 0 4px 15px rgba(240, 45, 50, 0.2);
+}
+
+.navbar-direita .botao-login::after {
+    display: none;
+}
+
+.navbar-direita .botao-login:hover {
+    background: var(--cor-destaque-escuro);
+    color: white;
+    transform: translateY(-2px);
+    box-shadow: var(--sombra-destaque);
+}
+
+.navbar-direita .botao-login i {
+    color: var(--cor-texto-claro);
+}
+
+
+/* ============================================
+   RESPONSIVIDADE DA NAVBAR
+   ============================================ */
+
+@media (max-width: 850px) {
+    .navbar {
+        height: 70px;
+        padding: 12px 20px;
+        top: 12px;
+        left: 12px;
+        width: calc(100% - 24px);
+    }
+
+    .navbar-esquerda {
+        gap: 15px;
+    }
+
+    .navbar-direita {
+        gap: 15px;
+    }
+
+    .navbar a {
+        font-size: 13px;
+    }
+
+    .navbar a span {
+        display: none;
+    }
+
+    .navbar-logo {
+        width: 42px;
+        height: 42px;
+    }
+}
+
+@media (max-width: 500px) {
+    .navbar {
+        height: 60px;
+        padding: 10px 14px;
+        top: 8px;
+        left: 8px;
+        width: calc(100% - 16px);
+        border-radius: 8px;
+    }
+
+    .navbar-esquerda {
+        gap: 10px;
+    }
+
+    .navbar-direita {
+        gap: 10px;
+    }
+
+    .navbar a {
+        font-size: 12px;
+        gap: 4px;
+    }
+
+    .navbar-logo {
+        width: 34px;
+        height: 34px;
+    }
+
+    .navbar-direita .botao-login {
+        padding: 6px 12px;
+        font-size: 11px;
+    }
+}
+
+/* Adicione ao final do arquivo style.css */
+
+/* ============================================
+   BOTÃO DE IDIOMA
+   ============================================ */
+
+.container-idioma {
+    position: relative;
+}
+
+.botao-idioma {
+    display: flex;
+    align-items: center;
+    gap: 8px;
+    background: rgba(255, 247, 220, 0.06);
+    border: 1px solid var(--borda-padrao);
+    border-radius: 6px;
+    padding: 8px 14px;
+    color: var(--cor-texto-claro);
+    cursor: pointer;
+    font-size: 14px;
+    font-weight: 600;
+    transition: all 0.3s ease;
+    font-family: inherit;
+}
+
+.botao-idioma:hover {
+    background: rgba(255, 247, 220, 0.12);
+    border-color: var(--cor-destaque);
+}
+
+.botao-idioma i {
+    color: var(--cor-destaque);
+    font-size: 14px;
+}
+
+.dropdown-idiomas {
+    position: absolute;
+    top: calc(100% + 8px);
+    right: 0;
+    min-width: 160px;
+    background: rgba(0, 20, 13, 0.95);
+    border: 1px solid var(--borda-padrao);
+    border-radius: 8px;
+    padding: 6px;
+    box-shadow: var(--sombra-padrao);
+    backdrop-filter: blur(10px);
+    opacity: 0;
+    visibility: hidden;
+    transform: translateY(-8px);
+    transition: all 0.3s ease;
+    z-index: 1001;
+}
+
+.dropdown-idiomas.aberto {
+    opacity: 1;
+    visibility: visible;
+    transform: translateY(0);
+}
+
+.opcao-idioma {
+    display: flex;
+    align-items: center;
+    gap: 10px;
+    width: 100%;
+    padding: 8px 14px;
+    background: none;
+    border: none;
+    border-radius: 4px;
+    color: var(--cor-texto-medio);
+    cursor: pointer;
+    font-size: 14px;
+    font-weight: 500;
+    transition: all 0.2s ease;
+    font-family: inherit;
+}
+
+.opcao-idioma:hover {
+    background: rgba(240, 45, 50, 0.08);
+    color: var(--cor-texto-claro);
+}
+
+.opcao-idioma.ativo {
+    background: rgba(240, 45, 50, 0.12);
+    color: var(--cor-destaque);
+}
+
+.opcao-idioma .flag {
+    font-size: 18px;
+}
+
+/* ============================================
+   RESPONSIVIDADE DO IDIOMA
+   ============================================ */
+
+@media (max-width: 850px) {
+    .botao-idioma {
+        padding: 6px 10px;
+        font-size: 12px;
+    }
+
+    .botao-idioma span {
+        display: none;
+    }
+
+    .dropdown-idiomas {
+        min-width: 140px;
+        right: -10px;
+    }
+}
+
+@media (max-width: 500px) {
+    .botao-idioma {
+        padding: 4px 8px;
+        font-size: 11px;
+    }
+
+    .botao-idioma i {
+        font-size: 12px;
+    }
+
+    .dropdown-idiomas {
+        min-width: 120px;
+        right: -5px;
+    }
+
+    .opcao-idioma {
+        font-size: 12px;
+        padding: 6px 10px;
+    }
+}

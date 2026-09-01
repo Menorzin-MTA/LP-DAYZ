@@ -1,0 +1,262 @@
+<!DOCTYPE html>
+<html lang="pt-br">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Regras - MTA DAYZ | Last Point</title>
+
+    <link rel="stylesheet" href="style.css">
+    <link rel="stylesheet" href="regras.css">
+
+    <link
+        rel="stylesheet"
+        href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.2/css/all.min.css"
+    >
+</head>
+
+<body>
+
+    <!-- ==========================================
+           NAVBAR (Barra de Navegação)
+           ========================================== -->
+
+    <nav class="navbar">
+
+        <div class="navbar-esquerda">
+            <a href="index.html">
+                <i class="fa-solid fa-house"></i>
+                <span data-trad-nav="inicio">Início</span>
+            </a>
+            <a href="loja.html">
+                <i class="fa-solid fa-store"></i>
+                <span data-trad-nav="loja">Loja</span>
+            </a>
+            <a href="regras.html" class="ativo">
+                <i class="fa-solid fa-scroll"></i>
+                <span data-trad-nav="regras">Regras</span>
+            </a>
+            <a href="ajuda.html">
+                <i class="fa-solid fa-circle-question"></i>
+                <span data-trad-nav="ajuda">Ajuda</span>
+            </a>
+        </div>
+
+        <img
+            class="navbar-logo"
+            src="assets/logo.png"
+            alt="Last Point - Logo"
+        >
+
+        <div class="navbar-direita">
+            <!-- Botão de idioma -->
+            <div class="container-idioma">
+                <button class="botao-idioma">
+                    <i class="fa-solid fa-globe"></i>
+                    <span>🇧🇷 Português</span>
+                </button>
+                <div class="dropdown-idiomas">
+                    <button class="opcao-idioma ativo" data-idioma="pt">
+                        <span class="flag">🇧🇷</span>
+                        Português
+                    </button>
+                    <button class="opcao-idioma" data-idioma="en">
+                        <span class="flag">🇺🇸</span>
+                        English
+                    </button>
+                </div>
+            </div>
+
+            <a href="#">
+                <i class="fa-brands fa-discord"></i>
+                <span data-trad-nav="discord">Discord</span>
+            </a>
+            <a href="#" class="botao-login">
+                <i class="fa-solid fa-right-to-bracket"></i>
+                <span data-trad-nav="login">Login</span>
+            </a>
+        </div>
+
+    </nav>
+
+
+    <!-- ==========================================
+           CONTEÚDO PRINCIPAL - REGRAS
+           ========================================== -->
+
+    <main class="pagina-regras">
+
+        <!-- CABEÇALHO -->
+        <section class="cabecalho-regras">
+            <span class="etiqueta-regras">Last Point</span>
+            <h1 data-trad="regras.titulo">Regras</h1>
+            <p data-trad="regras.subtitulo">
+                Conheça as regras do servidor e mantenha
+                uma boa experiência para todos os jogadores.
+            </p>
+        </section>
+
+        <!-- LISTA DE REGRAS -->
+        <section class="lista-regras">
+
+            <!-- Regra 01 -->
+            <article class="item-regra">
+                <span class="numero-regra">01</span>
+                <div class="conteudo-regra">
+                    <h2>
+                        <i class="fa-solid fa-users"></i>
+                        Respeito aos jogadores
+                    </h2>
+                    <p>
+                        Respeite todos os jogadores e membros
+                        da equipe. Ofensas, preconceito,
+                        discriminação e perseguição não serão
+                        tolerados.
+                    </p>
+                </div>
+            </article>
+
+            <!-- Regra 02 -->
+            <article class="item-regra">
+                <span class="numero-regra">02</span>
+                <div class="conteudo-regra">
+                    <h2>
+                        <i class="fa-solid fa-ban"></i>
+                        Proibido Deathmatch
+                    </h2>
+                    <p>
+                        Não mate outros jogadores sem uma
+                        justificativa válida dentro do contexto
+                        do servidor. Toda ação deve possuir
+                        uma motivação coerente.
+                    </p>
+                </div>
+            </article>
+
+            <!-- Regra 03 -->
+            <article class="item-regra">
+                <span class="numero-regra">03</span>
+                <div class="conteudo-regra">
+                    <h2>
+                        <i class="fa-solid fa-person-running"></i>
+                        Anti-RDM
+                    </h2>
+                    <p>
+                        É proibido atacar ou eliminar jogadores
+                        aleatoriamente sem qualquer interação
+                        ou motivo válido.
+                    </p>
+                </div>
+            </article>
+
+            <!-- Regra 04 -->
+            <article class="item-regra">
+                <span class="numero-regra">04</span>
+                <div class="conteudo-regra">
+                    <h2>
+                        <i class="fa-solid fa-car"></i>
+                        Uso de veículos
+                    </h2>
+                    <p>
+                        Utilize os veículos de forma coerente.
+                        Não utilize veículos para atropelar
+                        jogadores propositalmente ou obter
+                        vantagens injustas.
+                    </p>
+                </div>
+            </article>
+
+            <!-- Regra 05 -->
+            <article class="item-regra">
+                <span class="numero-regra">05</span>
+                <div class="conteudo-regra">
+                    <h2>
+                        <i class="fa-solid fa-skull-crossbones"></i>
+                        Exploração de bugs
+                    </h2>
+                    <p>
+                        É proibido utilizar bugs, falhas ou
+                        exploits para obter vantagens dentro
+                        do servidor. Bugs encontrados devem
+                        ser comunicados à administração.
+                    </p>
+                </div>
+            </article>
+
+            <!-- Regra 06 -->
+            <article class="item-regra">
+                <span class="numero-regra">06</span>
+                <div class="conteudo-regra">
+                    <h2>
+                        <i class="fa-solid fa-code"></i>
+                        Cheats e programas externos
+                    </h2>
+                    <p>
+                        Qualquer tipo de cheat, hack, script
+                        ou programa que ofereça vantagem
+                        injusta é estritamente proibido.
+                    </p>
+                </div>
+            </article>
+
+            <!-- Regra 07 -->
+            <article class="item-regra">
+                <span class="numero-regra">07</span>
+                <div class="conteudo-regra">
+                    <h2>
+                        <i class="fa-solid fa-microphone"></i>
+                        Uso do chat e voz
+                    </h2>
+                    <p>
+                        Utilize os canais de comunicação
+                        corretamente. Evite spam, flood,
+                        divulgação não autorizada e conteúdo
+                        ofensivo.
+                    </p>
+                </div>
+            </article>
+
+            <!-- Regra 08 -->
+            <article class="item-regra">
+                <span class="numero-regra">08</span>
+                <div class="conteudo-regra">
+                    <h2>
+                        <i class="fa-solid fa-shield-halved"></i>
+                        Respeite a administração
+                    </h2>
+                    <p>
+                        As decisões da equipe devem ser
+                        respeitadas. Caso discorde de alguma
+                        decisão, procure a administração pelos
+                        canais oficiais.
+                    </p>
+                </div>
+            </article>
+
+        </section>
+
+        <!-- AVISO -->
+        <section class="aviso-regras">
+            <i class="fa-solid fa-triangle-exclamation icone-aviso"></i>
+            <div>
+                <h3 data-trad="regras.atencao.titulo">Atenção</h3>
+                <p data-trad="regras.atencao.descricao">
+                    O desconhecimento das regras não isenta
+                    o jogador de punições. As regras podem
+                    ser atualizadas a qualquer momento pela
+                    administração.
+                </p>
+            </div>
+        </section>
+
+    </main>
+
+    <!-- ==========================================
+           SCRIPTS
+           ========================================== -->
+
+    <script src="traducoes.js"></script>
+    <script src="idioma.js"></script>
+
+</body>
+</html>

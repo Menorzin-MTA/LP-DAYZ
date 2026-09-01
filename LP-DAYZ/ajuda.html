@@ -1,0 +1,227 @@
+<!DOCTYPE html>
+<html lang="pt-br">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Painel de Ajuda - MTA DAYZ | Last Point</title>
+
+    <link rel="stylesheet" href="style.css">
+    <link rel="stylesheet" href="ajuda.css">
+
+    <link
+        rel="stylesheet"
+        href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.2/css/all.min.css"
+    >
+</head>
+
+<body>
+
+    <!-- ==========================================
+           NAVBAR (Barra de Navegação)
+           ========================================== -->
+
+    <nav class="navbar">
+
+        <div class="navbar-esquerda">
+            <a href="index.html">
+                <i class="fa-solid fa-house"></i>
+                <span data-trad-nav="inicio">Início</span>
+            </a>
+            <a href="loja.html">
+                <i class="fa-solid fa-store"></i>
+                <span data-trad-nav="loja">Loja</span>
+            </a>
+            <a href="regras.html">
+                <i class="fa-solid fa-scroll"></i>
+                <span data-trad-nav="regras">Regras</span>
+            </a>
+            <a href="ajuda.html" class="ativo">
+                <i class="fa-solid fa-circle-question"></i>
+                <span data-trad-nav="ajuda">Ajuda</span>
+            </a>
+        </div>
+
+        <img
+            class="navbar-logo"
+            src="assets/logo.png"
+            alt="Last Point - Logo"
+        >
+
+        <div class="navbar-direita">
+            <!-- Botão de idioma -->
+            <div class="container-idioma">
+                <button class="botao-idioma">
+                    <i class="fa-solid fa-globe"></i>
+                    <span>🇧🇷 Português</span>
+                </button>
+                <div class="dropdown-idiomas">
+                    <button class="opcao-idioma ativo" data-idioma="pt">
+                        <span class="flag">🇧🇷</span>
+                        Português
+                    </button>
+                    <button class="opcao-idioma" data-idioma="en">
+                        <span class="flag">🇺🇸</span>
+                        English
+                    </button>
+                </div>
+            </div>
+
+            <a href="#">
+                <i class="fa-brands fa-discord"></i>
+                <span data-trad-nav="discord">Discord</span>
+            </a>
+            <a href="#" class="botao-login">
+                <i class="fa-solid fa-right-to-bracket"></i>
+                <span data-trad-nav="login">Login</span>
+            </a>
+        </div>
+
+    </nav>
+
+
+    <!-- ==========================================
+           CONTEÚDO PRINCIPAL - PAINEL DE AJUDA
+           ========================================== -->
+
+    <main class="pagina-ajuda">
+
+        <!-- CABEÇALHO -->
+        <section class="cabecalho-ajuda">
+            <span class="etiqueta-ajuda">Last Point</span>
+            <h1 data-trad="ajuda.titulo">Painel de Ajuda</h1>
+            <p data-trad="ajuda.subtitulo">
+                Tire suas dúvidas e aprenda tudo sobre
+                o mundo de Last Point.
+            </p>
+        </section>
+
+        <!-- ==========================================
+               CATEGORIAS DE AJUDA
+               ========================================== -->
+
+        <section class="grade-ajuda">
+
+            <!-- CATEGORIA 1 - INICIAIS -->
+            <div class="categoria-ajuda">
+                <div class="cabecalho-categoria">
+                    <i class="fa-solid fa-rocket"></i>
+                    <h2>Dicas Iniciais</h2>
+                    <span class="quantidade">5 itens</span>
+                </div>
+                <div class="lista-duvidas">
+                    <!-- Conteúdo mantido em português pois é específico do servidor -->
+                    <!-- ... (mesmo conteúdo de antes) ... -->
+                </div>
+            </div>
+
+            <!-- CATEGORIA 2 - RECURSOS E COLETA -->
+            <div class="categoria-ajuda">
+                <div class="cabecalho-categoria">
+                    <i class="fa-solid fa-tree"></i>
+                    <h2>Recursos e Coleta</h2>
+                    <span class="quantidade">5 itens</span>
+                </div>
+                <div class="lista-duvidas">
+                    <!-- Conteúdo mantido em português -->
+                </div>
+            </div>
+
+            <!-- CATEGORIA 3 - FABRICAÇÃO E CONSTRUÇÃO -->
+            <div class="categoria-ajuda">
+                <div class="cabecalho-categoria">
+                    <i class="fa-solid fa-hammer"></i>
+                    <h2>Fabricação e Construção</h2>
+                    <span class="quantidade">4 itens</span>
+                </div>
+                <div class="lista-duvidas">
+                    <!-- Conteúdo mantido em português -->
+                </div>
+            </div>
+
+            <!-- CATEGORIA 4 - SOBREVIVÊNCIA -->
+            <div class="categoria-ajuda">
+                <div class="cabecalho-categoria">
+                    <i class="fa-solid fa-heart-pulse"></i>
+                    <h2>Sobrevivência</h2>
+                    <span class="quantidade">4 itens</span>
+                </div>
+                <div class="lista-duvidas">
+                    <!-- Conteúdo mantido em português -->
+                </div>
+            </div>
+
+            <!-- CATEGORIA 5 - MILITAR E AVANÇADO -->
+            <div class="categoria-ajuda">
+                <div class="cabecalho-categoria">
+                    <i class="fa-solid fa-helmet-safety"></i>
+                    <h2>Militar e Avançado</h2>
+                    <span class="quantidade">4 itens</span>
+                </div>
+                <div class="lista-duvidas">
+                    <!-- Conteúdo mantido em português -->
+                </div>
+            </div>
+
+            <!-- CATEGORIA 6 - CONFIGURAÇÃO -->
+            <div class="categoria-ajuda">
+                <div class="cabecalho-categoria">
+                    <i class="fa-solid fa-gear"></i>
+                    <h2>Configuração</h2>
+                    <span class="quantidade">1 item</span>
+                </div>
+                <div class="lista-duvidas">
+                    <!-- Conteúdo mantido em português -->
+                </div>
+            </div>
+
+        </section>
+
+    </main>
+
+    <!-- ==========================================
+           SCRIPTS
+           ========================================== -->
+
+    <script src="traducoes.js"></script>
+    <script src="idioma.js"></script>
+
+    <script>
+        // ==========================================
+        // FUNÇÃO PARA ABRIR/FECHAR DÚVIDAS
+        // ==========================================
+
+        function toggleDuvida(elemento) {
+            const item = elemento.parentElement;
+            const resposta = item.querySelector('.duvida-resposta');
+            const icone = elemento.querySelector('.icone-toggle');
+
+            const estaAberto = item.classList.contains('aberto');
+
+            if (estaAberto) {
+                item.classList.remove('aberto');
+                resposta.style.maxHeight = '0';
+                resposta.style.padding = '0 20px';
+                icone.className = 'fa-solid fa-plus icone-toggle';
+            } else {
+                item.classList.add('aberto');
+                resposta.style.maxHeight = resposta.scrollHeight + 'px';
+                resposta.style.padding = '15px 20px';
+                icone.className = 'fa-solid fa-minus icone-toggle';
+            }
+        }
+
+        document.addEventListener('DOMContentLoaded', function() {
+            document.querySelectorAll('.item-duvida').forEach(item => {
+                const resposta = item.querySelector('.duvida-resposta');
+                const icone = item.querySelector('.icone-toggle');
+                item.classList.remove('aberto');
+                resposta.style.maxHeight = '0';
+                resposta.style.padding = '0 20px';
+                icone.className = 'fa-solid fa-plus icone-toggle';
+            });
+        });
+    </script>
+
+</body>
+</html>
