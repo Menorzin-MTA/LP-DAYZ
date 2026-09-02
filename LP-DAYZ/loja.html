@@ -8,17 +8,13 @@
 
     <link rel="stylesheet" href="style.css">
     <link rel="stylesheet" href="loja.css">
-
-    <link
-        rel="stylesheet"
-        href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.2/css/all.min.css"
-    >
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.2/css/all.min.css">
 </head>
 
 <body>
 
     <!-- ==========================================
-           NAVBAR (Barra de Navegação)
+           NAVBAR
            ========================================== -->
 
     <nav class="navbar">
@@ -42,14 +38,9 @@
             </a>
         </div>
 
-        <img
-            class="navbar-logo"
-            src="assets/logo.png"
-            alt="Last Point - Logo"
-        >
+        <img class="navbar-logo" src="assets/logo.png" alt="Last Point - Logo">
 
         <div class="navbar-direita">
-            <!-- Botão de idioma -->
             <div class="container-idioma">
                 <button class="botao-idioma">
                     <i class="fa-solid fa-globe"></i>
@@ -57,12 +48,10 @@
                 </button>
                 <div class="dropdown-idiomas">
                     <button class="opcao-idioma ativo" data-idioma="pt">
-                        <span class="flag">🇧🇷</span>
-                        Português
+                        <span class="flag">🇧🇷</span> Português
                     </button>
                     <button class="opcao-idioma" data-idioma="en">
-                        <span class="flag">🇺🇸</span>
-                        English
+                        <span class="flag">🇺🇸</span> English
                     </button>
                 </div>
             </div>
@@ -86,85 +75,78 @@
 
     <main class="pagina-loja">
 
-        <!-- CABEÇALHO -->
         <section class="cabecalho-loja">
             <span class="etiqueta-loja">Last Point</span>
-            <h1 data-trad="loja.titulo">Loja</h1>
-            <p data-trad="loja.subtitulo">
-                Adquira benefícios exclusivos para sua jornada
-                no mundo de Last Point.
+            <h1 data-trad="titulo">Loja</h1>
+            <p data-trad="subtitulo">
+                Adquira benefícios exclusivos para sua jornada no mundo de Last Point.
             </p>
         </section>
 
-        <!-- GRADE DE PRODUTOS -->
         <section class="grade-produtos">
 
-            <!-- Produto 1 - Kit Sobrevivente -->
+            <!-- Produto 1 -->
             <div class="card-produto">
                 <div class="icone-produto">
                     <i class="fa-solid fa-gun"></i>
                 </div>
-                <h2 data-trad="loja.produtos.kit.nome">Kit Sobrevivente</h2>
-                <p data-trad="loja.produtos.kit.descricao">
-                    Equipamentos básicos para começar
-                    sua jornada em Last Point.
+                <h2 data-trad="produtos.kit.nome">Kit Sobrevivente</h2>
+                <p data-trad="produtos.kit.descricao">
+                    Equipamentos básicos para começar sua jornada em Last Point.
                 </p>
-                <div class="preco-produto" data-trad="loja.produtos.kit.preco">R$ 19,90</div>
+                <div class="preco-produto" data-trad="produtos.kit.preco">R$ 19,90</div>
                 <button class="botao-comprar">
                     <i class="fa-solid fa-cart-shopping"></i>
-                    <span data-trad="loja.comprar">Comprar</span>
+                    <span data-trad="comprar">Comprar</span>
                 </button>
             </div>
 
-            <!-- Produto 2 - VIP Survivor -->
+            <!-- Produto 2 -->
             <div class="card-produto destaque">
-                <span class="badge-destaque" data-trad="loja.produtos.vip.badge">Mais Vendido</span>
+                <span class="badge-destaque" data-trad="produtos.vip.badge">Mais Vendido</span>
                 <div class="icone-produto">
                     <i class="fa-solid fa-shield-halved"></i>
                 </div>
-                <h2 data-trad="loja.produtos.vip.nome">VIP Survivor</h2>
-                <p data-trad="loja.produtos.vip.descricao">
-                    Benefícios exclusivos e vantagens
-                    dentro do servidor.
+                <h2 data-trad="produtos.vip.nome">VIP Survivor</h2>
+                <p data-trad="produtos.vip.descricao">
+                    Benefícios exclusivos e vantagens dentro do servidor.
                 </p>
-                <div class="preco-produto" data-trad="loja.produtos.vip.preco">R$ 39,90</div>
+                <div class="preco-produto" data-trad="produtos.vip.preco">R$ 39,90</div>
                 <button class="botao-comprar">
                     <i class="fa-solid fa-cart-shopping"></i>
-                    <span data-trad="loja.comprar">Comprar</span>
+                    <span data-trad="comprar">Comprar</span>
                 </button>
             </div>
 
-            <!-- Produto 3 - VIP Elite -->
+            <!-- Produto 3 -->
             <div class="card-produto">
                 <div class="icone-produto">
                     <i class="fa-solid fa-crown"></i>
                 </div>
-                <h2 data-trad="loja.produtos.elite.nome">VIP Elite</h2>
-                <p data-trad="loja.produtos.elite.descricao">
-                    O pacote definitivo para quem
-                    quer dominar Last Point.
+                <h2 data-trad="produtos.elite.nome">VIP Elite</h2>
+                <p data-trad="produtos.elite.descricao">
+                    O pacote definitivo para quem quer dominar Last Point.
                 </p>
-                <div class="preco-produto" data-trad="loja.produtos.elite.preco">R$ 69,90</div>
+                <div class="preco-produto" data-trad="produtos.elite.preco">R$ 69,90</div>
                 <button class="botao-comprar">
                     <i class="fa-solid fa-cart-shopping"></i>
-                    <span data-trad="loja.comprar">Comprar</span>
+                    <span data-trad="comprar">Comprar</span>
                 </button>
             </div>
 
-            <!-- Produto 4 - Coins -->
+            <!-- Produto 4 -->
             <div class="card-produto">
                 <div class="icone-produto">
                     <i class="fa-solid fa-coins"></i>
                 </div>
-                <h2 data-trad="loja.produtos.coins.nome">1.000 Last Coins</h2>
-                <p data-trad="loja.produtos.coins.descricao">
-                    Moedas virtuais para utilizar
-                    na loja do servidor.
+                <h2 data-trad="produtos.coins.nome">1.000 Last Coins</h2>
+                <p data-trad="produtos.coins.descricao">
+                    Moedas virtuais para utilizar na loja do servidor.
                 </p>
-                <div class="preco-produto" data-trad="loja.produtos.coins.preco">R$ 10,00</div>
+                <div class="preco-produto" data-trad="produtos.coins.preco">R$ 10,00</div>
                 <button class="botao-comprar">
                     <i class="fa-solid fa-cart-shopping"></i>
-                    <span data-trad="loja.comprar">Comprar</span>
+                    <span data-trad="comprar">Comprar</span>
                 </button>
             </div>
 

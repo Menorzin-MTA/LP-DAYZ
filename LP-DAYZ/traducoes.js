@@ -214,3 +214,6 @@ const traducoes = {
         }
     }
 };
+
+// Verifica se o objeto foi carregado corretamente
+console.log('✅ Traduções carregadas:', Object.keys(traducoes));
