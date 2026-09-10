@@ -8,6 +8,7 @@
 
     <link rel="stylesheet" href="style.css">
     <link rel="stylesheet" href="loja.css">
+    <link rel="stylesheet" href="auth-modal.css">
     <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.2/css/all.min.css">
 </head>
 
@@ -160,6 +161,64 @@
 
     <script src="traducoes.js"></script>
     <script src="idioma.js"></script>
+    <script src="auth.js"></script>
 
+
+    <!-- Botão Fixo de Acesso ao Carrinho -->
+<button class="botao-carrinho-fixo" id="abrirCarrinho">
+    <i class="fa-solid fa-cart-shopping"></i>
+    <span class="carrinho-badge" id="carrinhoQtd">0</span>
+</button>
+
+<!-- Drawer / Aba Lateral do Carrinho -->
+<div class="carrinho-drawer-overlay" id="carrinhoOverlay"></div>
+<aside class="carrinho-drawer" id="carrinhoDrawer">
+    <div class="carrinho-cabecalho">
+        <h2><i class="fa-solid fa-cart-shopping"></i> Meu Carrinho</h2>
+        <button class="fechar-drawer" id="fecharCarrinho">&times;</button>
+    </div>
+    <div class="carrinho-conteudo" id="carrinhoItens">
+        <p class="carrinho-vazio">Seu carrinho está vazio.</p>
+    </div>
+    <div class="carrinho-rodape">
+        <div class="carrinho-total">
+            <span>Total:</span>
+            <strong id="carrinhoTotal">R$ 0,00</strong>
+        </div>
+        <button class="botao-finalizar" id="btnFinalizarCompra">Finalizar Compra</button>
+    </div>
+</aside>
+
+<!-- Modal de Login Re-estilizado -->
+<div class="modal-auth-overlay" id="authModalOverlay">
+    <div class="modal-auth">
+        <button class="fechar-modal" id="fecharAuthModal">&times;</button>
+        <div class="auth-cabecalho">
+            <i class="fa-solid fa-shield-halved"></i>
+            <h2>Área do Jogador</h2>
+            <p>Entre na sua conta para continuar</p>
+        </div>
+        <form id="formLogin" class="form-auth">
+            <div class="campo-grupo">
+                <label for="inputUsuario">Usuário</label>
+                <div class="input-com-icone">
+                    <i class="fa-solid fa-user"></i>
+                    <input type="text" id="inputUsuario" placeholder="Digite seu usuário" required>
+                </div>
+            </div>
+            <div class="campo-grupo">
+                <label for="inputSenha">Senha</label>
+                <div class="input-com-icone">
+                    <i class="fa-solid fa-lock"></i>
+                    <input type="password" id="inputSenha" placeholder="Digite sua senha" required>
+                </div>
+            </div>
+            <div id="mensagemErro" class="mensagem-erro"></div>
+            <button type="submit" class="botao-submit-auth">
+                <i class="fa-solid fa-right-to-bracket"></i> Entrar
+            </button>
+        </form>
+    </div>
+</div>
 </body>
 </html>
