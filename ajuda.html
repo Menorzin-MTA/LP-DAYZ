@@ -1,0 +1,626 @@
+<!DOCTYPE html>
+<html lang="pt-br">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Painel de Ajuda - MTA DAYZ | Last Point</title>
+
+    <link rel="stylesheet" href="style.css">
+    <link rel="stylesheet" href="ajuda.css">
+
+    <link
+        rel="stylesheet"
+        href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.2/css/all.min.css"
+    >
+</head>
+
+<body>
+
+    <!-- ==========================================
+           NAVBAR
+           ========================================== -->
+
+    <nav class="navbar">
+
+        <div class="navbar-esquerda">
+            <a href="index.html">
+                <i class="fa-solid fa-house"></i>
+                <span data-trad-nav="inicio">Início</span>
+            </a>
+            <a href="loja.html">
+                <i class="fa-solid fa-store"></i>
+                <span data-trad-nav="loja">Loja</span>
+            </a>
+            <a href="regras.html">
+                <i class="fa-solid fa-scroll"></i>
+                <span data-trad-nav="regras">Regras</span>
+            </a>
+            <a href="ajuda.html" class="ativo">
+                <i class="fa-solid fa-circle-question"></i>
+                <span data-trad-nav="ajuda">Ajuda</span>
+            </a>
+        </div>
+
+        <img class="navbar-logo" src="assets/logo.png" alt="Last Point - Logo">
+
+        <div class="navbar-direita">
+            <div class="container-idioma">
+                <button class="botao-idioma">
+                    <i class="fa-solid fa-globe"></i>
+                    <span>🇧🇷 Português</span>
+                </button>
+                <div class="dropdown-idiomas">
+                    <button class="opcao-idioma ativo" data-idioma="pt">
+                        <span class="flag">🇧🇷</span> Português
+                    </button>
+                    <button class="opcao-idioma" data-idioma="en">
+                        <span class="flag">🇺🇸</span> English
+                    </button>
+                </div>
+            </div>
+
+            <a href="#">
+                <i class="fa-brands fa-discord"></i>
+                <span data-trad-nav="discord">Discord</span>
+            </a>
+            <a href="#" class="botao-login">
+                <i class="fa-solid fa-right-to-bracket"></i>
+                <span data-trad-nav="login">Login</span>
+            </a>
+        </div>
+
+    </nav>
+
+
+    <!-- ==========================================
+           CONTEÚDO PRINCIPAL - AJUDA
+           ========================================== -->
+
+    <main class="pagina-ajuda">
+
+        <section class="cabecalho-ajuda">
+            <span class="etiqueta-ajuda">Last Point</span>
+            <h1 data-trad="titulo">Painel de Ajuda</h1>
+            <p data-trad="subtitulo">
+                Tire suas dúvidas e aprenda tudo sobre o mundo de Last Point.
+            </p>
+        </section>
+
+        <section class="grade-ajuda">
+
+            <!-- CATEGORIA 1 - INICIAIS -->
+            <div class="categoria-ajuda">
+                <div class="cabecalho-categoria">
+                    <i class="fa-solid fa-rocket"></i>
+                    <h2>Dicas Iniciais</h2>
+                    <span class="quantidade">5 itens</span>
+                </div>
+                <div class="lista-duvidas">
+
+                    <div class="item-duvida">
+                        <div class="duvida-header" onclick="toggleDuvida(this)">
+                            <i class="fa-solid fa-plus icone-toggle"></i>
+                            <h3>Dicas iniciais para sobreviver</h3>
+                        </div>
+                        <div class="duvida-resposta">
+                            <p><strong>1. Priorize água e comida:</strong> Sua barra de fome e sede são essenciais. Procure por poços, rios e saqueie casas em busca de alimentos.</p>
+                            <p><strong>2. Fique atento aos zumbis:</strong> Evite confrontos desnecessários no início. Use furtividade para se locomover.</p>
+                            <p><strong>3. Junte-se a outros sobreviventes:</strong> Grupos aumentam suas chances de sobrevivência.</p>
+                            <p><strong>4. Faça uma base simples:</strong> Comece com uma estrutura pequena para guardar seus itens.</p>
+                            <p><strong>5. Explore com cuidado:</strong> Conheça o mapa e saiba onde encontrar recursos importantes.</p>
+                        </div>
+                    </div>
+
+                    <div class="item-duvida">
+                        <div class="duvida-header" onclick="toggleDuvida(this)">
+                            <i class="fa-solid fa-plus icone-toggle"></i>
+                            <h3>Como fazer uma base?</h3>
+                        </div>
+                        <div class="duvida-resposta">
+                            <p>Para construir sua base, você precisará de <strong>madeira</strong> e <strong>pregos</strong>.</p>
+                            <ol>
+                                <li>Colete madeira com um machado (F1 → Ferramentas).</li>
+                                <li>Consiga pregos em caixas de ferramentas ou na recicladora.</li>
+                                <li>Acesse o menu de construção (F2) e selecione "Construir Base".</li>
+                                <li>Escolha o local e comece a montar sua estrutura.</li>
+                            </ol>
+                            <p><strong>💡 Dica:</strong> Bases mais resistentes exigem materiais melhores como tijolos e cimento.</p>
+                        </div>
+                    </div>
+
+                    <div class="item-duvida">
+                        <div class="duvida-header" onclick="toggleDuvida(this)">
+                            <i class="fa-solid fa-plus icone-toggle"></i>
+                            <h3>Como raidar uma base?</h3>
+                        </div>
+                        <div class="duvida-resposta">
+                            <p>Raidar uma base requer preparação e ferramentas adequadas:</p>
+                            <ol>
+                                <li><strong>Ferramentas de arrombamento:</strong> Marreta, pé de cabra ou explosivos.</li>
+                                <li><strong>Observe a estrutura:</strong> Identifique pontos fracos (portas, janelas).</li>
+                                <li><strong>Use explosivos:</strong> C4, granadas ou foguetes para paredes mais fortes.</li>
+                                <li><strong>Tenha um plano de fuga:</strong> Outros jogadores podem aparecer.</li>
+                            </ol>
+                            <p><strong>⚠️ Atenção:</strong> Raidar bases de outros jogadores tem regras específicas. Consulte as <a href="regras.html">Regras do Servidor</a>.</p>
+                        </div>
+                    </div>
+
+                    <div class="item-duvida">
+                        <div class="duvida-header" onclick="toggleDuvida(this)">
+                            <i class="fa-solid fa-plus icone-toggle"></i>
+                            <h3>Dia de raid - Como funciona?</h3>
+                        </div>
+                        <div class="duvida-resposta">
+                            <p>O <strong>Dia de Raid</strong> é um evento especial onde as bases ficam vulneráveis em horários específicos.</p>
+                            <ul>
+                                <li><strong>Horários:</strong> Aos sábados das 14h às 18h (horário de Brasília).</li>
+                                <li><strong>Proteção:</strong> Durante os dias normais, as bases são protegidas.</li>
+                                <li><strong>Recompensas:</strong> Saques maiores e itens raros estão disponíveis.</li>
+                            </ul>
+                            <p><strong>🎯 Estratégia:</strong> Planeje seus ataques e forme alianças para aumentar suas chances.</p>
+                        </div>
+                    </div>
+
+                    <div class="item-duvida">
+                        <div class="duvida-header" onclick="toggleDuvida(this)">
+                            <i class="fa-solid fa-plus icone-toggle"></i>
+                            <h3>Bases pagas - Como funcionam?</h3>
+                        </div>
+                        <div class="duvida-resposta">
+                            <p>Bases pagas são áreas seguras adquiridas com <strong>Coins</strong> (moeda do servidor).</p>
+                            <ul>
+                                <li><strong>Proteção total:</strong> Nenhum jogador pode invadir sua base paga.</li>
+                                <li><strong>Armazenamento seguro:</strong> Seus itens ficam protegidos contra roubos.</li>
+                                <li><strong>Personalização:</strong> Você pode decorar e expandir sua base.</li>
+                                <li><strong>Valores:</strong> A partir de R$ 19,90 (consulte a <a href="loja.html">Loja</a>).</li>
+                            </ul>
+                            <p><strong>💡 Vantagem:</strong> Ideal para quem quer jogar com tranquilidade sem perder seus itens.</p>
+                        </div>
+                    </div>
+
+                </div>
+            </div>
+
+            <!-- CATEGORIA 2 - RECURSOS E COLETA -->
+            <div class="categoria-ajuda">
+                <div class="cabecalho-categoria">
+                    <i class="fa-solid fa-tree"></i>
+                    <h2>Recursos e Coleta</h2>
+                    <span class="quantidade">5 itens</span>
+                </div>
+                <div class="lista-duvidas">
+
+                    <div class="item-duvida">
+                        <div class="duvida-header" onclick="toggleDuvida(this)">
+                            <i class="fa-solid fa-plus icone-toggle"></i>
+                            <h3>Como coletar madeira?</h3>
+                        </div>
+                        <div class="duvida-resposta">
+                            <p>Para coletar madeira você precisa de um <strong>machado</strong>.</p>
+                            <ol>
+                                <li>Acesse o menu <strong>F1 → Ferramentas</strong> e pegue um machado.</li>
+                                <li>Encontre árvores pelo mapa (áreas verdes e florestas).</li>
+                                <li>Com o machado em mãos, clique nas árvores para coletar.</li>
+                                <li>Cada árvore rende de 5 a 15 unidades de madeira.</li>
+                            </ol>
+                            <p><strong>💡 Dica:</strong> Use uma motosserra para coletar madeira mais rápido.</p>
+                        </div>
+                    </div>
+
+                    <div class="item-duvida">
+                        <div class="duvida-header" onclick="toggleDuvida(this)">
+                            <i class="fa-solid fa-plus icone-toggle"></i>
+                            <h3>Como coletar minérios?</h3>
+                        </div>
+                        <div class="duvida-resposta">
+                            <p>Minérios são essenciais para fabricar itens avançados.</p>
+                            <ol>
+                                <li>Pegue uma <strong>picareta</strong> no menu F1 → Ferramentas.</li>
+                                <li>Encontre pedras e minas espalhadas pelo mapa.</li>
+                                <li>Use a picareta para quebrar as rochas e coletar minérios.</li>
+                                <li><strong>Tipos de minério:</strong> Ferro, Cobre, Ouro, Titânio e Urânio.</li>
+                            </ol>
+                            <p><strong>⚠️ Cuidado:</strong> Algumas áreas têm minérios mais raros, mas também mais perigosas.</p>
+                        </div>
+                    </div>
+
+                    <div class="item-duvida">
+                        <div class="duvida-header" onclick="toggleDuvida(this)">
+                            <i class="fa-solid fa-plus icone-toggle"></i>
+                            <h3>Como conseguir caixa de pregos?</h3>
+                        </div>
+                        <div class="duvida-resposta">
+                            <p>Pregos são essenciais para construções e reparos.</p>
+                            <ul>
+                                <li><strong>Lojas:</strong> Compre em mercados e lojas pelo mapa.</li>
+                                <li><strong>Saque:</strong> Encontre em garagens, oficinas e construções abandonadas.</li>
+                                <li><strong>Reciclagem:</strong> Utilize a recicladora para transformar sucata em pregos.</li>
+                                <li><strong>Troca:</strong> Negocie com outros jogadores.</li>
+                            </ul>
+                            <p><strong>💡 Dica:</strong> Caixas de ferramentas geralmente contêm pregos.</p>
+                        </div>
+                    </div>
+
+                    <div class="item-duvida">
+                        <div class="duvida-header" onclick="toggleDuvida(this)">
+                            <i class="fa-solid fa-plus icone-toggle"></i>
+                            <h3>Como conseguir graveto?</h3>
+                        </div>
+                        <div class="duvida-resposta">
+                            <p>Gravetos são usados para fazer fogueiras e itens básicos.</p>
+                            <ul>
+                                <li><strong>Árvores caídas:</strong> Interaja com troncos no chão.</li>
+                                <li><strong>Arbustos:</strong> Alguns arbustos podem ser quebrados para gravetos.</li>
+                                <li><strong>Saque:</strong> Encontre em casas e construções abandonadas.</li>
+                                <li><strong>Ferramenta:</strong> Use uma faca ou machado para coletar mais rápido.</li>
+                            </ul>
+                        </div>
+                    </div>
+
+                    <div class="item-duvida">
+                        <div class="duvida-header" onclick="toggleDuvida(this)">
+                            <i class="fa-solid fa-plus icone-toggle"></i>
+                            <h3>Como fazer fogueira?</h3>
+                        </div>
+                        <div class="duvida-resposta">
+                            <p>A fogueira é essencial para cozinhar e se aquecer.</p>
+                            <ol>
+                                <li>Colete <strong>gravetos</strong> (veja item acima).</li>
+                                <li>Acesse o menu de <strong>Fabricação (F3)</strong>.</li>
+                                <li>Selecione "Fogueira" e confirme.</li>
+                                <li>Posicione a fogueira no chão e acenda com isqueiro ou fósforos.</li>
+                            </ol>
+                            <p><strong>💡 Dica:</strong> Você pode cozinhar alimentos na fogueira.</p>
+                        </div>
+                    </div>
+
+                </div>
+            </div>
+
+            <!-- CATEGORIA 3 - FABRICAÇÃO E CONSTRUÇÃO -->
+            <div class="categoria-ajuda">
+                <div class="cabecalho-categoria">
+                    <i class="fa-solid fa-hammer"></i>
+                    <h2>Fabricação e Construção</h2>
+                    <span class="quantidade">4 itens</span>
+                </div>
+                <div class="lista-duvidas">
+
+                    <div class="item-duvida">
+                        <div class="duvida-header" onclick="toggleDuvida(this)">
+                            <i class="fa-solid fa-plus icone-toggle"></i>
+                            <h3>Como fazer mesa de trabalho?</h3>
+                        </div>
+                        <div class="duvida-resposta">
+                            <p>A mesa de trabalho permite fabricar itens avançados.</p>
+                            <ol>
+                                <li>Consiga <strong>madeira</strong> e <strong>pregos</strong>.</li>
+                                <li>Acesse o menu de <strong>Fabricação (F3)</strong>.</li>
+                                <li>Selecione "Mesa de Trabalho" e confirme.</li>
+                                <li>Posicione a mesa em sua base.</li>
+                            </ol>
+                            <p><strong>💡 Benefício:</strong> Com a mesa você pode fazer armas, munição e equipamentos.</p>
+                        </div>
+                    </div>
+
+                    <div class="item-duvida">
+                        <div class="duvida-header" onclick="toggleDuvida(this)">
+                            <i class="fa-solid fa-plus icone-toggle"></i>
+                            <h3>Como fazer bandeira e suas funcionalidades?</h3>
+                        </div>
+                        <div class="duvida-resposta">
+                            <p>A bandeira é o coração da sua base!</p>
+                            <h4>Como fazer:</h4>
+                            <ol>
+                                <li>Consiga <strong>tecido</strong> e <strong>madeira</strong>.</li>
+                                <li>Use o menu <strong>Fabricação (F3)</strong>.</li>
+                                <li>Selecione "Bandeira" e confirme.</li>
+                            </ol>
+                            <h4>Funcionalidades:</h4>
+                            <ul>
+                                <li><strong>Proteção de área:</strong> Cria uma zona segura ao redor.</li>
+                                <li><strong>Fast Travel:</strong> Permite teleporte para sua base (com tempo de espera).</li>
+                                <li><strong>Reviver companheiros:</strong> Membros do grupo podem ser revividos na bandeira.</li>
+                            </ul>
+                        </div>
+                    </div>
+
+                    <div class="item-duvida">
+                        <div class="duvida-header" onclick="toggleDuvida(this)">
+                            <i class="fa-solid fa-plus icone-toggle"></i>
+                            <h3>Como fazer tenda e caixas?</h3>
+                        </div>
+                        <div class="duvida-resposta">
+                            <p>Tendas e caixas são usadas para armazenar seus itens.</p>
+                            <h4>Tenda:</h4>
+                            <ol>
+                                <li>Consiga <strong>lona</strong> e <strong>cordas</strong>.</li>
+                                <li>Acesse <strong>Fabricação (F3) → Armazenamento</strong>.</li>
+                                <li>Selecione "Tenda" e posicione.</li>
+                            </ol>
+                            <h4>Caixas:</h4>
+                            <ol>
+                                <li>Consiga <strong>madeira</strong> e <strong>pregos</strong>.</li>
+                                <li>Acesse <strong>Fabricação (F3) → Armazenamento</strong>.</li>
+                                <li>Selecione "Caixa" e posicione.</li>
+                            </ol>
+                            <p><strong>💡 Dica:</strong> Caixas são mais seguras que tendas, mas exigem mais recursos.</p>
+                        </div>
+                    </div>
+
+                    <div class="item-duvida">
+                        <div class="duvida-header" onclick="toggleDuvida(this)">
+                            <i class="fa-solid fa-plus icone-toggle"></i>
+                            <h3>Como montar e reparar veículo?</h3>
+                        </div>
+                        <div class="duvida-resposta">
+                            <p>Veículos são essenciais para explorar o mapa rapidamente.</p>
+                            <h4>Como montar:</h4>
+                            <ol>
+                                <li>Encontre as <strong>peças</strong> do veículo (motor, rodas, chassis).</li>
+                                <li>Monte no menu <strong>F3 → Veículos</strong>.</li>
+                                <li>Use <strong>combustível</strong> para abastecer.</li>
+                            </ol>
+                            <h4>Como reparar:</h4>
+                            <ol>
+                                <li>Use um <strong>kit de reparo</strong> ou <strong>ferramentas</strong>.</li>
+                                <li>Acesse o veículo e selecione "Reparar".</li>
+                                <li>Peças danificadas podem ser trocadas.</li>
+                            </ol>
+                            <p><strong>⚠️ Atenção:</strong> Veículos fazem barulho e atraem zumbis!</p>
+                        </div>
+                    </div>
+
+                </div>
+            </div>
+
+            <!-- CATEGORIA 4 - SOBREVIVÊNCIA -->
+            <div class="categoria-ajuda">
+                <div class="cabecalho-categoria">
+                    <i class="fa-solid fa-heart-pulse"></i>
+                    <h2>Sobrevivência</h2>
+                    <span class="quantidade">4 itens</span>
+                </div>
+                <div class="lista-duvidas">
+
+                    <div class="item-duvida">
+                        <div class="duvida-header" onclick="toggleDuvida(this)">
+                            <i class="fa-solid fa-plus icone-toggle"></i>
+                            <h3>Como conseguir água?</h3>
+                        </div>
+                        <div class="duvida-resposta">
+                            <p>Água é vital para sua sobrevivência.</p>
+                            <ul>
+                                <li><strong>Poços:</strong> Use um balde para coletar água.</li>
+                                <li><strong>Rios e lagos:</strong> Beba diretamente (risco de doenças).</li>
+                                <li><strong>Chuva:</strong> Coloque recipientes para coletar água da chuva.</li>
+                                <li><strong>Comida:</strong> Alguns alimentos fornecem hidratação.</li>
+                                <li><strong>Purificador:</strong> Use pastilhas ou ferva a água para purificar.</li>
+                            </ul>
+                            <p><strong>💡 Dica:</strong> Sempre tenha uma garrafa de água reserva.</p>
+                        </div>
+                    </div>
+
+                    <div class="item-duvida">
+                        <div class="duvida-header" onclick="toggleDuvida(this)">
+                            <i class="fa-solid fa-plus icone-toggle"></i>
+                            <h3>Como conseguir comida?</h3>
+                        </div>
+                        <div class="duvida-resposta">
+                            <p>Comida mantém sua energia e saúde.</p>
+                            <ul>
+                                <li><strong>Caça:</strong> Cace animais com armas ou armadilhas.</li>
+                                <li><strong>Coleta:</strong> Frutas, vegetais e cogumelos estão pelo mapa.</li>
+                                <li><strong>Saque:</strong> Encontre enlatados em casas e mercados.</li>
+                                <li><strong>Pesca:</strong> Use uma vara de pescar em rios e lagos.</li>
+                                <li><strong>Agricultura:</strong> Plante sementes e cultive alimentos.</li>
+                            </ul>
+                            <p><strong>⚠️ Cuidado:</strong> Comida crua pode causar doenças. Cozinhe antes de comer.</p>
+                        </div>
+                    </div>
+
+                    <div class="item-duvida">
+                        <div class="duvida-header" onclick="toggleDuvida(this)">
+                            <i class="fa-solid fa-plus icone-toggle"></i>
+                            <h3>Como curar doenças?</h3>
+                        </div>
+                        <div class="duvida-resposta">
+                            <p>Doenças podem ser fatais se não tratadas.</p>
+                            <h4>Tipos de doenças:</h4>
+                            <ul>
+                                <li><strong>Infecção:</strong> Causada por feridas não tratadas.</li>
+                                <li><strong>Envenenamento:</strong> Comida estragada ou água contaminada.</li>
+                                <li><strong>Hipotermia:</strong> Ficar muito tempo no frio.</li>
+                                <li><strong>Insolação:</strong> Exposição excessiva ao sol.</li>
+                            </ul>
+                            <h4>Remédios:</h4>
+                            <ul>
+                                <li><strong>Antibióticos:</strong> Curam infecções.</li>
+                                <li><strong>Carvão ativado:</strong> Trata envenenamento.</li>
+                                <li><strong>Remédios:</strong> Encontre em hospitais e farmácias.</li>
+                                <li><strong>Ervas medicinais:</strong> Coletadas na natureza.</li>
+                            </ul>
+                            <p><strong>💡 Dica:</strong> Previna-se mantendo alimentação e hidratação em dia.</p>
+                        </div>
+                    </div>
+
+                    <div class="item-duvida">
+                        <div class="duvida-header" onclick="toggleDuvida(this)">
+                            <i class="fa-solid fa-plus icone-toggle"></i>
+                            <h3>Como funciona a recicladora?</h3>
+                        </div>
+                        <div class="duvida-resposta">
+                            <p>A recicladora transforma itens inúteis em recursos valiosos.</p>
+                            <ol>
+                                <li>Construa a recicladora no menu <strong>F3 → Construção</strong>.</li>
+                                <li>Coloque itens que você não usa (roupas, latas, sucata).</li>
+                                <li>A recicladora processa e gera <strong>materiais</strong> como:</li>
+                                <ul>
+                                    <li><strong>Tecido</strong> (de roupas)</li>
+                                    <li><strong>Metal</strong> (de ferramentas)</li>
+                                    <li><strong>Plástico</strong> (de garrafas)</li>
+                                    <li><strong>Pregos</strong> (de sucata)</li>
+                                </ul>
+                            </ol>
+                            <p><strong>💡 Dica:</strong> Use a recicladora para aproveitar ao máximo seus recursos.</p>
+                        </div>
+                    </div>
+
+                </div>
+            </div>
+
+            <!-- CATEGORIA 5 - MILITAR E AVANÇADO -->
+            <div class="categoria-ajuda">
+                <div class="cabecalho-categoria">
+                    <i class="fa-solid fa-helmet-safety"></i>
+                    <h2>Militar e Avançado</h2>
+                    <span class="quantidade">4 itens</span>
+                </div>
+                <div class="lista-duvidas">
+
+                    <div class="item-duvida">
+                        <div class="duvida-header" onclick="toggleDuvida(this)">
+                            <i class="fa-solid fa-plus icone-toggle"></i>
+                            <h3>Sobre as Military Bases</h3>
+                        </div>
+                        <div class="duvida-resposta">
+                            <p>As <strong>Military Bases</strong> são áreas de alto risco e alta recompensa.</p>
+                            <ul>
+                                <li><strong>Localização:</strong> Áreas estratégicas do mapa (consulte o mapa do servidor).</li>
+                                <li><strong>Itens encontrados:</strong> Armas militares, munição, coletes, equipamentos táticos.</li>
+                                <li><strong>Perigos:</strong> Zumbis mais fortes, outros jogadores e radiação.</li>
+                                <li><strong>Horário:</strong> Algumas bases são limpas em horários específicos.</li>
+                            </ul>
+                            <p><strong>⚠️ Atenção:</strong> Bases militares são PvP ativo. Prepare-se para combate.</p>
+                            <p><strong>💡 Dica:</strong> Vá em grupo e leve suprimentos extras.</p>
+                        </div>
+                    </div>
+
+                    <div class="item-duvida">
+                        <div class="duvida-header" onclick="toggleDuvida(this)">
+                            <i class="fa-solid fa-plus icone-toggle"></i>
+                            <h3>Como fazer pólvora?</h3>
+                        </div>
+                        <div class="duvida-resposta">
+                            <p>A pólvora é essencial para fabricar munição e explosivos.</p>
+                            <ol>
+                                <li>Consiga <strong>carvão</strong> (queime madeira na fogueira).</li>
+                                <li>Consiga <strong>enxofre</strong> (minere em vulcões ou áreas específicas).</li>
+                                <li>Consiga <strong>salitre</strong> (encontre em cavernas ou recicle).</li>
+                                <li>Use a <strong>Mesa de Trabalho</strong> e selecione "Fabricar Pólvora".</li>
+                            </ol>
+                            <p><strong>💡 Dica:</strong> A pólvora também pode ser encontrada em bases militares.</p>
+                        </div>
+                    </div>
+
+                    <div class="item-duvida">
+                        <div class="duvida-header" onclick="toggleDuvida(this)">
+                            <i class="fa-solid fa-plus icone-toggle"></i>
+                            <h3>Como fazer componentes eletrônicos?</h3>
+                        </div>
+                        <div class="duvida-resposta">
+                            <p>Componentes eletrônicos são usados para itens avançados.</p>
+                            <ol>
+                                <li>Consiga <strong>cobre</strong> e <strong>silício</strong>.</li>
+                                <li>Derreta o cobre para fazer <strong>fios</strong>.</li>
+                                <li>Combine fios com silício na <strong>Mesa de Trabalho</strong>.</li>
+                                <li>Selecione "Componentes Eletrônicos".</li>
+                            </ol>
+                            <p><strong>💡 Uso:</strong> Essenciais para rádios, sistemas de segurança e veículos avançados.</p>
+                        </div>
+                    </div>
+
+                    <div class="item-duvida">
+                        <div class="duvida-header" onclick="toggleDuvida(this)">
+                            <i class="fa-solid fa-plus icone-toggle"></i>
+                            <h3>Sobre os painéis F1, F2, F3 e F4</h3>
+                        </div>
+                        <div class="duvida-resposta">
+                            <p>Os painéis de atalho são essenciais para navegar rapidamente:</p>
+                            <div class="painel-grid">
+                                <div class="painel-item">
+                                    <span class="tecla">F1</span>
+                                    <div class="painel-descricao">
+                                        <strong>Inventário e Ferramentas</strong>
+                                        <p>Acesse seu inventário, equipamentos e ferramentas básicas.</p>
+                                    </div>
+                                </div>
+                                <div class="painel-item">
+                                    <span class="tecla">F2</span>
+                                    <div class="painel-descricao">
+                                        <strong>Construção e Base</strong>
+                                        <p>Construa estruturas, posicione itens e gerencie sua base.</p>
+                                    </div>
+                                </div>
+                                <div class="painel-item">
+                                    <span class="tecla">F3</span>
+                                    <div class="painel-descricao">
+                                        <strong>Fabricação</strong>
+                                        <p>Fabrique armas, munição, equipamentos e itens avançados.</p>
+                                    </div>
+                                </div>
+                                <div class="painel-item">
+                                    <span class="tecla">F4</span>
+                                    <div class="painel-descricao">
+                                        <strong>Menu do Servidor</strong>
+                                        <p>Acesse informações do servidor, grupos e configurações.</p>
+                                    </div>
+                                </div>
+                            </div>
+                            <p><strong>💡 Dica:</strong> Memorize os atalhos para agir mais rápido em situações de perigo.</p>
+                        </div>
+                    </div>
+
+                </div>
+            </div>
+
+            <!-- CATEGORIA 6 - CONFIGURAÇÃO -->
+            <div class="categoria-ajuda">
+                <div class="cabecalho-categoria">
+                    <i class="fa-solid fa-gear"></i>
+                    <h2>Configuração</h2>
+                    <span class="quantidade">1 item</span>
+                </div>
+                <div class="lista-duvidas">
+
+                    <div class="item-duvida">
+                        <div class="duvida-header" onclick="toggleDuvida(this)">
+                            <i class="fa-solid fa-plus icone-toggle"></i>
+                            <h3>Como fazer whitelist?</h3>
+                        </div>
+                        <div class="duvida-resposta">
+                            <p>A whitelist permite que apenas jogadores autorizados entrem no servidor.</p>
+                            <h4>Para jogadores:</h4>
+                            <ol>
+                                <li>Acesse o <strong>Discord</strong> oficial do servidor.</li>
+                                <li>Entre no canal <strong>#whitelist</strong>.</li>
+                                <li>Envie seu <strong>Nickname</strong> e <strong>ID do Steam/MTA</strong>.</li>
+                                <li>Aguarde a aprovação da administração.</li>
+                            </ol>
+                            <h4>Para administradores:</h4>
+                            <ol>
+                                <li>Acesse o <strong>Painel Admin</strong> (F4).</li>
+                                <li>Selecione "Gerenciar Whitelist".</li>
+                                <li>Adicione ou remova jogadores da lista.</li>
+                            </ol>
+                            <p><strong>⚠️ Atenção:</strong> A whitelist é obrigatória para jogar no servidor.</p>
+                        </div>
+                    </div>
+
+                </div>
+            </div>
+
+        </section>
+
+    </main>
+
+    <!-- ==========================================
+           SCRIPTS
+           ========================================== -->
+
+    <script src="traducoes.js"></script>
+    <script src="idioma.js"></script>
+
+</body>
+</html>

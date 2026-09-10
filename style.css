@@ -1,0 +1,874 @@
+/* ============================================
+   VARIÁVEIS GLOBAIS (Tema do Servidor)
+   ============================================ */
+
+:root {
+    /* Cores principais */
+    --cor-fundo: #000000;
+    --cor-fundo-escuro: #00140D;
+    --cor-fundo-medio: #00251A;
+
+    /* Cores de destaque (vermelho) */
+    --cor-destaque: #F02D32;
+    --cor-destaque-escuro: #A91F25;
+
+    /* Cores de texto */
+    --cor-texto-claro: #FFF7DC;
+    --cor-texto-medio: #D8D1B8;
+
+    /* Cores neutras */
+    --cor-cinza: #181A18;
+
+    /* Bordas e sombras */
+    --borda-padrao: rgba(255, 247, 220, 0.08);
+    --borda-destaque: rgba(240, 45, 50, 0.25);
+    --sombra-padrao: 0 8px 30px rgba(0, 0, 0, 0.7);
+    --sombra-destaque: 0 6px 20px rgba(240, 45, 50, 0.35);
+}
+
+
+/* ============================================
+   RESET E BASE
+   ============================================ */
+
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+
+body {
+    background: var(--cor-fundo);
+    color: var(--cor-texto-claro);
+    font-family: 'Segoe UI', Arial, Helvetica, sans-serif;
+    min-height: 100vh;
+    line-height: 1.6;
+}
+
+
+/* ============================================
+   NAVBAR (Barra de Navegação)
+   ============================================ */
+
+.navbar {
+    background: rgba(0, 20, 13, 0.92);
+    width: calc(100% - 40px);
+    height: 80px;
+    padding: 15px 30px;
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+
+    position: fixed;
+    top: 20px;
+    left: 20px;
+    z-index: 1000;
+
+    border-radius: 12px;
+    border: 1px solid var(--borda-padrao);
+    box-shadow: var(--sombra-padrao), inset 0 0 20px rgba(0, 0, 0, 0.3);
+    backdrop-filter: blur(10px);
+}
+
+/* Grupo de links à esquerda */
+.navbar-esquerda {
+    display: flex;
+    align-items: center;
+    gap: 28px;
+}
+
+/* Grupo de links à direita */
+.navbar-direita {
+    display: flex;
+    align-items: center;
+    gap: 28px;
+}
+
+/* Links da navbar */
+.navbar a {
+    color: var(--cor-texto-claro);
+    text-decoration: none;
+    display: flex;
+    align-items: center;
+    gap: 8px;
+    font-size: 15px;
+    font-weight: 600;
+    transition: all 0.3s ease;
+    position: relative;
+}
+
+/* Linha de destaque no hover */
+.navbar a::after {
+    content: '';
+    position: absolute;
+    bottom: -4px;
+    left: 0;
+    width: 0;
+    height: 2px;
+    background: var(--cor-destaque);
+    transition: width 0.3s ease;
+}
+
+.navbar a:hover::after {
+    width: 100%;
+}
+
+.navbar a:hover {
+    color: var(--cor-destaque);
+    transform: translateY(-1px);
+}
+
+/* Ícones da navbar */
+.navbar i {
+    color: var(--cor-destaque);
+    font-size: 16px;
+    transition: all 0.3s ease;
+}
+
+.navbar a:hover i {
+    color: var(--cor-texto-claro);
+    transform: scale(1.15);
+}
+
+/* Link ativo (página atual) */
+.navbar a.ativo {
+    color: var(--cor-destaque);
+}
+
+.navbar a.ativo::after {
+    width: 100%;
+}
+
+/* Logo centralizado */
+.navbar-logo {
+    width: 55px;
+    height: 55px;
+    object-fit: contain;
+    position: absolute;
+    left: 50%;
+    transform: translateX(-50%);
+    filter: drop-shadow(0 0 8px rgba(240, 45, 50, 0.15));
+    transition: all 0.3s ease;
+}
+
+.navbar-logo:hover {
+    transform: translateX(-50%) scale(1.08);
+    filter: drop-shadow(0 0 12px rgba(240, 45, 50, 0.35));
+}
+
+/* Botão de login (destacado) */
+.navbar-direita .botao-login {
+    background: var(--cor-destaque);
+    color: var(--cor-texto-claro);
+    padding: 10px 18px;
+    border-radius: 6px;
+    box-shadow: 0 4px 15px rgba(240, 45, 50, 0.2);
+}
+
+.navbar-direita .botao-login::after {
+    display: none;
+}
+
+.navbar-direita .botao-login:hover {
+    background: var(--cor-destaque-escuro);
+    color: white;
+    transform: translateY(-2px);
+    box-shadow: var(--sombra-destaque);
+}
+
+.navbar-direita .botao-login i {
+    color: var(--cor-texto-claro);
+}
+
+
+/* ============================================
+   BOTÃO DE IDIOMA
+   ============================================ */
+
+.container-idioma {
+    position: relative;
+}
+
+.botao-idioma {
+    display: flex;
+    align-items: center;
+    gap: 8px;
+    background: rgba(255, 247, 220, 0.06);
+    border: 1px solid var(--borda-padrao);
+    border-radius: 6px;
+    padding: 8px 14px;
+    color: var(--cor-texto-claro);
+    cursor: pointer;
+    font-size: 14px;
+    font-weight: 600;
+    transition: all 0.3s ease;
+    font-family: inherit;
+}
+
+.botao-idioma:hover {
+    background: rgba(255, 247, 220, 0.12);
+    border-color: var(--cor-destaque);
+}
+
+.botao-idioma i {
+    color: var(--cor-destaque);
+    font-size: 14px;
+}
+
+.dropdown-idiomas {
+    position: absolute;
+    top: calc(100% + 8px);
+    right: 0;
+    min-width: 160px;
+    background: rgba(0, 20, 13, 0.95);
+    border: 1px solid var(--borda-padrao);
+    border-radius: 8px;
+    padding: 6px;
+    box-shadow: var(--sombra-padrao);
+    backdrop-filter: blur(10px);
+    opacity: 0;
+    visibility: hidden;
+    transform: translateY(-8px);
+    transition: all 0.3s ease;
+    z-index: 1001;
+}
+
+.dropdown-idiomas.aberto {
+    opacity: 1;
+    visibility: visible;
+    transform: translateY(0);
+}
+
+.opcao-idioma {
+    display: flex;
+    align-items: center;
+    gap: 10px;
+    width: 100%;
+    padding: 8px 14px;
+    background: none;
+    border: none;
+    border-radius: 4px;
+    color: var(--cor-texto-medio);
+    cursor: pointer;
+    font-size: 14px;
+    font-weight: 500;
+    transition: all 0.2s ease;
+    font-family: inherit;
+}
+
+.opcao-idioma:hover {
+    background: rgba(240, 45, 50, 0.08);
+    color: var(--cor-texto-claro);
+}
+
+.opcao-idioma.ativo {
+    background: rgba(240, 45, 50, 0.12);
+    color: var(--cor-destaque);
+}
+
+.opcao-idioma .flag {
+    font-size: 18px;
+}
+
+
+/* ============================================
+   RESPONSIVIDADE DA NAVBAR
+   ============================================ */
+
+@media (max-width: 850px) {
+    .navbar {
+        height: 70px;
+        padding: 12px 20px;
+        top: 12px;
+        left: 12px;
+        width: calc(100% - 24px);
+    }
+
+    .navbar-esquerda {
+        gap: 15px;
+    }
+
+    .navbar-direita {
+        gap: 15px;
+    }
+
+    .navbar a {
+        font-size: 13px;
+    }
+
+    .navbar a span {
+        display: none;
+    }
+
+    .navbar-logo {
+        width: 42px;
+        height: 42px;
+    }
+
+    .botao-idioma {
+        padding: 6px 10px;
+        font-size: 12px;
+    }
+
+    .botao-idioma span {
+        display: none;
+    }
+
+    .dropdown-idiomas {
+        min-width: 140px;
+        right: -10px;
+    }
+}
+
+@media (max-width: 500px) {
+    .navbar {
+        height: 60px;
+        padding: 10px 14px;
+        top: 8px;
+        left: 8px;
+        width: calc(100% - 16px);
+        border-radius: 8px;
+    }
+
+    .navbar-esquerda {
+        gap: 10px;
+    }
+
+    .navbar-direita {
+        gap: 10px;
+    }
+
+    .navbar a {
+        font-size: 12px;
+        gap: 4px;
+    }
+
+    .navbar-logo {
+        width: 34px;
+        height: 34px;
+    }
+
+    .navbar-direita .botao-login {
+        padding: 6px 12px;
+        font-size: 11px;
+    }
+
+    .botao-idioma {
+        padding: 4px 8px;
+        font-size: 11px;
+    }
+
+    .botao-idioma i {
+        font-size: 12px;
+    }
+
+    .dropdown-idiomas {
+        min-width: 120px;
+        right: -5px;
+    }
+
+    .opcao-idioma {
+        font-size: 12px;
+        padding: 6px 10px;
+    }
+}
+
+
+/* ============================================
+   PÁGINA INICIAL - ESTILOS
+   ============================================ */
+
+.pagina-inicial {
+    min-height: 100vh;
+    padding: 100px 30px 0;
+    background:
+        radial-gradient(
+            circle at 70% 30%,
+            rgba(240, 45, 50, 0.05),
+            transparent 50%
+        ),
+        radial-gradient(
+            circle at 30% 70%,
+            rgba(0, 37, 26, 0.3),
+            transparent 50%
+        ),
+        #000000;
+}
+
+
+/* ============================================
+   HERO
+   ============================================ */
+
+.hero {
+    max-width: 1200px;
+    margin: 0 auto;
+    padding: 60px 0 80px;
+    display: flex;
+    align-items: center;
+    gap: 60px;
+}
+
+.hero-conteudo {
+    flex: 1;
+}
+
+.hero-etiqueta {
+    color: var(--cor-destaque);
+    font-size: 14px;
+    font-weight: bold;
+    letter-spacing: 4px;
+    text-transform: uppercase;
+}
+
+.hero-conteudo h1 {
+    font-size: 72px;
+    font-weight: 900;
+    color: var(--cor-texto-claro);
+    margin: 15px 0 20px;
+    letter-spacing: 4px;
+    text-shadow: 0 0 40px rgba(240, 45, 50, 0.15);
+}
+
+.hero-descricao {
+    font-size: 18px;
+    color: var(--cor-texto-medio);
+    line-height: 1.8;
+    max-width: 500px;
+}
+
+
+/* ============================================
+   BOTÕES DO HERO
+   ============================================ */
+
+.hero-botoes {
+    display: flex;
+    gap: 15px;
+    margin: 30px 0 40px;
+    flex-wrap: wrap;
+}
+
+.botao-primario {
+    display: inline-flex;
+    align-items: center;
+    gap: 10px;
+    padding: 14px 32px;
+    background: var(--cor-destaque);
+    color: var(--cor-texto-claro);
+    border-radius: 8px;
+    text-decoration: none;
+    font-weight: 600;
+    font-size: 16px;
+    transition: all 0.3s ease;
+    box-shadow: 0 4px 20px rgba(240, 45, 50, 0.25);
+}
+
+.botao-primario:hover {
+    background: var(--cor-destaque-escuro);
+    transform: translateY(-3px);
+    box-shadow: 0 8px 30px rgba(240, 45, 50, 0.4);
+}
+
+.botao-primario i {
+    font-size: 18px;
+}
+
+.botao-secundario {
+    display: inline-flex;
+    align-items: center;
+    gap: 10px;
+    padding: 14px 32px;
+    background: rgba(255, 247, 220, 0.06);
+    color: var(--cor-texto-claro);
+    border-radius: 8px;
+    text-decoration: none;
+    font-weight: 600;
+    font-size: 16px;
+    border: 1px solid var(--borda-padrao);
+    transition: all 0.3s ease;
+}
+
+.botao-secundario:hover {
+    background: rgba(255, 247, 220, 0.12);
+    transform: translateY(-3px);
+    border-color: var(--cor-destaque);
+}
+
+
+/* ============================================
+   STATS DO HERO
+   ============================================ */
+
+.hero-stats {
+    display: flex;
+    gap: 50px;
+}
+
+.stat-item {
+    display: flex;
+    flex-direction: column;
+}
+
+.stat-numero {
+    font-size: 28px;
+    font-weight: 900;
+    color: var(--cor-texto-claro);
+}
+
+.stat-rotulo {
+    font-size: 13px;
+    color: var(--cor-texto-medio);
+    margin-top: 2px;
+}
+
+
+/* ============================================
+   IMAGEM DO HERO
+   ============================================ */
+
+.hero-imagem {
+    flex: 1;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
+
+.hero-logo-grande {
+    width: 350px;
+    height: 350px;
+    object-fit: contain;
+    filter: drop-shadow(0 0 60px rgba(240, 45, 50, 0.08));
+    animation: flutuar 4s ease-in-out infinite;
+}
+
+@keyframes flutuar {
+    0%, 100% { transform: translateY(0px); }
+    50% { transform: translateY(-15px); }
+}
+
+
+/* ============================================
+   DIFERENCIAIS
+   ============================================ */
+
+.diferenciais {
+    max-width: 1200px;
+    margin: 0 auto;
+    padding: 60px 0 80px;
+    display: grid;
+    grid-template-columns: repeat(4, 1fr);
+    gap: 25px;
+}
+
+.diferencial-card {
+    background:
+        linear-gradient(
+            145deg,
+            rgba(0, 37, 26, 0.6),
+            rgba(24, 26, 24, 0.6)
+        );
+    border: 1px solid var(--borda-padrao);
+    border-radius: 12px;
+    padding: 30px 25px;
+    text-align: center;
+    transition: all 0.3s ease;
+}
+
+.diferencial-card:hover {
+    transform: translateY(-6px);
+    border-color: rgba(240, 45, 50, 0.3);
+    box-shadow: 0 15px 40px rgba(0, 0, 0, 0.3);
+}
+
+.diferencial-icone {
+    width: 60px;
+    height: 60px;
+    margin: 0 auto 18px;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    border-radius: 50%;
+    background: rgba(240, 45, 50, 0.08);
+    border: 1px solid var(--borda-destaque);
+}
+
+.diferencial-icone i {
+    color: var(--cor-destaque);
+    font-size: 24px;
+}
+
+.diferencial-card h3 {
+    color: var(--cor-texto-claro);
+    font-size: 18px;
+    margin-bottom: 10px;
+}
+
+.diferencial-card p {
+    color: var(--cor-texto-medio);
+    font-size: 14px;
+    line-height: 1.6;
+}
+
+
+/* ============================================
+   COMO JOGAR
+   ============================================ */
+
+.como-jogar {
+    max-width: 1200px;
+    margin: 0 auto;
+    padding: 60px 0 80px;
+    text-align: center;
+}
+
+.secao-etiqueta {
+    color: var(--cor-destaque);
+    font-size: 13px;
+    font-weight: bold;
+    letter-spacing: 5px;
+    text-transform: uppercase;
+}
+
+.como-jogar h2 {
+    font-size: 40px;
+    color: var(--cor-texto-claro);
+    margin: 10px 0 50px;
+}
+
+.destaque-texto {
+    color: var(--cor-destaque);
+}
+
+.passos-grid {
+    display: grid;
+    grid-template-columns: repeat(3, 1fr);
+    gap: 30px;
+    max-width: 900px;
+    margin: 0 auto 40px;
+}
+
+.passo-item {
+    background:
+        linear-gradient(
+            145deg,
+            rgba(0, 37, 26, 0.6),
+            rgba(24, 26, 24, 0.6)
+        );
+    border: 1px solid var(--borda-padrao);
+    border-radius: 12px;
+    padding: 30px 25px;
+    transition: all 0.3s ease;
+}
+
+.passo-item:hover {
+    transform: translateY(-4px);
+    border-color: rgba(240, 45, 50, 0.2);
+}
+
+.passo-numero {
+    display: inline-block;
+    background: var(--cor-destaque);
+    color: var(--cor-texto-claro);
+    font-weight: 900;
+    font-size: 16px;
+    padding: 4px 14px;
+    border-radius: 20px;
+    margin-bottom: 15px;
+}
+
+.passo-item h4 {
+    color: var(--cor-texto-claro);
+    font-size: 18px;
+    margin-bottom: 10px;
+}
+
+.passo-item p {
+    color: var(--cor-texto-medio);
+    font-size: 14px;
+    line-height: 1.6;
+}
+
+.passo-extra {
+    display: inline-flex;
+    align-items: center;
+    gap: 12px;
+    background: rgba(240, 45, 50, 0.06);
+    border: 1px solid var(--borda-destaque);
+    border-radius: 8px;
+    padding: 14px 28px;
+}
+
+.passo-extra i {
+    color: var(--cor-destaque);
+    font-size: 20px;
+}
+
+.passo-extra p {
+    color: var(--cor-texto-medio);
+    font-size: 14px;
+}
+
+.ip-servidor {
+    color: var(--cor-texto-claro);
+    font-weight: bold;
+    font-family: 'Courier New', monospace;
+    letter-spacing: 1px;
+}
+
+
+/* ============================================
+   RODAPÉ
+   ============================================ */
+
+.rodape {
+    max-width: 1200px;
+    margin: 0 auto;
+    padding: 30px 0 40px;
+    border-top: 1px solid var(--borda-padrao);
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    flex-wrap: wrap;
+    gap: 15px;
+}
+
+.rodape p {
+    color: var(--cor-texto-medio);
+    font-size: 13px;
+}
+
+.rodape-social {
+    display: flex;
+    gap: 15px;
+}
+
+.rodape-social a {
+    color: var(--cor-texto-medio);
+    font-size: 18px;
+    transition: all 0.3s ease;
+}
+
+.rodape-social a:hover {
+    color: var(--cor-destaque);
+    transform: translateY(-2px);
+}
+
+
+/* ============================================
+   RESPONSIVIDADE DA PÁGINA INICIAL
+   ============================================ */
+
+@media (max-width: 1000px) {
+    .hero {
+        flex-direction: column;
+        text-align: center;
+        gap: 30px;
+        padding: 40px 0 60px;
+    }
+
+    .hero-conteudo {
+        display: flex;
+        flex-direction: column;
+        align-items: center;
+    }
+
+    .hero-descricao {
+        max-width: 100%;
+    }
+
+    .hero-botoes {
+        justify-content: center;
+    }
+
+    .hero-stats {
+        gap: 30px;
+    }
+
+    .hero-logo-grande {
+        width: 250px;
+        height: 250px;
+    }
+
+    .diferenciais {
+        grid-template-columns: repeat(2, 1fr);
+    }
+
+    .passos-grid {
+        grid-template-columns: 1fr;
+        max-width: 400px;
+    }
+}
+
+@media (max-width: 700px) {
+    .pagina-inicial {
+        padding: 90px 20px 0;
+    }
+
+    .hero-conteudo h1 {
+        font-size: 42px;
+    }
+
+    .hero-descricao {
+        font-size: 16px;
+    }
+
+    .hero-stats {
+        flex-wrap: wrap;
+        justify-content: center;
+        gap: 20px;
+    }
+
+    .stat-numero {
+        font-size: 22px;
+    }
+
+    .diferenciais {
+        grid-template-columns: 1fr;
+        padding: 30px 0 50px;
+    }
+
+    .como-jogar h2 {
+        font-size: 30px;
+    }
+
+    .hero-logo-grande {
+        width: 180px;
+        height: 180px;
+    }
+
+    .rodape {
+        flex-direction: column;
+        text-align: center;
+    }
+
+    .botao-primario,
+    .botao-secundario {
+        padding: 12px 24px;
+        font-size: 14px;
+        width: 100%;
+        justify-content: center;
+    }
+}
+
+@media (max-width: 400px) {
+    .hero-conteudo h1 {
+        font-size: 32px;
+    }
+
+    .hero-botoes {
+        flex-direction: column;
+        width: 100%;
+    }
+
+    .passo-extra {
+        flex-direction: column;
+        text-align: center;
+        padding: 14px 18px;
+    }
+
+    .ip-servidor {
+        font-size: 12px;
+        word-break: break-all;
+    }
+}
