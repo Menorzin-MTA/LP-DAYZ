@@ -52,7 +52,8 @@ body {
     height: 100%;
     object-fit: cover;
     z-index: -5;
-    opacity: 0.5;
+    opacity: 0.4;
+    filter: brightness(0.2); /* 0.4 deixa com 40% do brilho original (quanto menor, mais escuro) */
 }
 
 /* ============================================
@@ -401,9 +402,8 @@ body {
             rgba(0, 37, 26, 0.3),
             transparent 50%
         ),
-        #000000;
+        transparent; /* Trocado de #000000 para transparent */
 }
-
 
 /* ============================================
    HERO
