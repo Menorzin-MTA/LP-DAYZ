@@ -5,10 +5,8 @@
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>MTA DAYZ - Last Point</title>
-
-    <link rel="stylesheet" href="style.css">
-    <link rel="stylesheet" href="auth-modal.css">
-
+    <link rel="stylesheet" href="css/style.css">
+    <link rel="stylesheet" href="css/auth-modal.css">
     <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.2/css/all.min.css">
 </head>
 
@@ -50,6 +48,10 @@
         >
 
         <div class="navbar-direita">
+        <a href="#" class="badge-online">
+            <i class="fa-solid fa-users"></i>
+            <span class="stat-numero" id="qtdPlayers">0/500</span>
+        </a>
             <div class="container-idioma">
                 <button class="botao-idioma">
                     <i class="fa-solid fa-globe"></i>
@@ -66,15 +68,11 @@
                     </button>
                 </div>
             </div>
-
-            <a href="#">
-                <i class="fa-brands fa-discord"></i>
-                <span data-trad-nav="discord">Discord</span>
-            </a>
             <a href="#" class="botao-login">
                 <i class="fa-solid fa-right-to-bracket"></i>
                 <span data-trad-nav="login">Login</span>
             </a>
+
         </div>
 
     </nav>
@@ -163,7 +161,7 @@
         </section>
 
         <section class="como-jogar">
-            <span class="secao-etiqueta">Comece Agora</span>
+            <span class="secao-etiqueta" data-trad="comoJogar.cagora">Comece Agora</span>
             <h2>
                 <span data-trad="comoJogar.titulo">Como Jogar no</span>
                 <span class="destaque-texto" data-trad="comoJogar.destaque">Last Point</span>
@@ -210,9 +208,9 @@
 
     </main>
 
-    <script src="traducoes.js"></script>
-    <script src="idioma.js"></script>
-    <script src="auth.js"></script>
+    <script src="js/traducoes.js"></script>
+    <script src="js/idioma.js"></script>
+    <script src="js/auth.js"></script>
 
     <!-- Botão Fixo de Acesso ao Carrinho -->
 <button class="botao-carrinho-fixo" id="abrirCarrinho">

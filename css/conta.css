@@ -1,0 +1,165 @@
+/* ============================================
+   ESTILOS DA PÁGINA DE CONTA E INVENTÁRIO
+   ============================================ */
+
+.pagina-conta {
+    min-height: 100vh;
+    padding: 140px 30px 80px;
+    background: radial-gradient(circle at 50% 20%, rgba(0, 37, 26, 0.4), transparent 50%), #000000;
+}
+
+.cabecalho-conta {
+    max-width: 1100px;
+    margin: 0 auto 40px;
+}
+
+.card-usuario-perfil {
+    display: flex;
+    align-items: center;
+    gap: 25px;
+    background: linear-gradient(135deg, rgba(0, 37, 26, 0.9), rgba(24, 26, 24, 0.9));
+    border: 1px solid var(--borda-destaque);
+    padding: 30px;
+    border-radius: 12px;
+    box-shadow: 0 10px 30px rgba(0,0,0,0.5);
+}
+
+.avatar-usuario {
+    width: 80px;
+    height: 80px;
+    border-radius: 50%;
+    background: rgba(240, 45, 50, 0.1);
+    border: 2px solid var(--cor-destaque);
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    font-size: 36px;
+    color: var(--cor-destaque);
+}
+
+.info-usuario {
+    flex: 1;
+}
+
+.info-usuario h1 {
+    font-size: 32px;
+    color: var(--cor-texto-claro);
+    margin: 4px 0;
+}
+
+.info-usuario p {
+    color: var(--cor-texto-medio);
+    font-size: 14px;
+}
+
+.etiqueta-status {
+    color: #2ecc71;
+    font-size: 12px;
+    font-weight: bold;
+    text-transform: uppercase;
+    letter-spacing: 1px;
+}
+
+.botao-sair {
+    background: rgba(240, 45, 50, 0.15);
+    border: 1px solid var(--cor-destaque);
+    color: var(--cor-texto-claro);
+    padding: 10px 20px;
+    border-radius: 6px;
+    cursor: pointer;
+    font-weight: bold;
+    transition: 0.3s;
+}
+
+.botao-sair:hover {
+    background: var(--cor-destaque);
+}
+
+/* GRADE DO INVENTÁRIO */
+.secao-inventario {
+    max-width: 1100px;
+    margin: 0 auto;
+}
+
+.cabecalho-secao h2 {
+    font-size: 24px;
+    color: var(--cor-texto-claro);
+    display: flex;
+    align-items: center;
+    gap: 10px;
+}
+
+.cabecalho-secao p {
+    color: var(--cor-texto-medio);
+    font-size: 14px;
+    margin-top: 5px;
+    margin-bottom: 25px;
+}
+
+.grade-inventario {
+    display: grid;
+    grid-template-columns: repeat(auto-fill, minmax(320px, 1fr));
+    gap: 20px;
+}
+
+.card-item-inventario {
+    background: rgba(18, 20, 18, 0.85);
+    border: 1px solid var(--borda-padrao);
+    border-radius: 10px;
+    padding: 20px;
+    position: relative;
+    transition: 0.3s;
+}
+
+.card-item-inventario:hover {
+    border-color: var(--cor-destaque);
+    transform: translateY(-4px);
+}
+
+.card-item-header {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    margin-bottom: 12px;
+}
+
+.card-item-header .icone {
+    font-size: 24px;
+    color: var(--cor-destaque);
+}
+
+.card-item-header .badge-status {
+    background: rgba(46, 204, 113, 0.15);
+    color: #2ecc71;
+    padding: 4px 10px;
+    border-radius: 12px;
+    font-size: 11px;
+    font-weight: bold;
+}
+
+.card-item-inventario h3 {
+    font-size: 18px;
+    color: var(--cor-texto-claro);
+}
+
+.codigo-resgate-box {
+    margin-top: 15px;
+    background: rgba(0, 0, 0, 0.5);
+    border: 1px dashed var(--borda-destaque);
+    padding: 10px;
+    border-radius: 6px;
+    text-align: center;
+}
+
+.codigo-resgate-box span {
+    display: block;
+    font-size: 11px;
+    color: var(--cor-texto-medio);
+}
+
+.codigo-resgate-box strong {
+    font-family: monospace;
+    font-size: 16px;
+    color: var(--cor-destaque);
+    letter-spacing: 2px;
+}
