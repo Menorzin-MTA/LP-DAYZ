@@ -175,7 +175,7 @@ const traducoes = {
     },
 
 
-    // ==========================================
+// ==========================================
     // PÁGINA DE REGRAS
     // ==========================================
 
@@ -183,6 +183,22 @@ const traducoes = {
         pt: {
             titulo: 'Regras',
             subtitulo: 'Conheça as regras do servidor e mantenha uma boa experiência para todos os jogadores.',
+            r1_titulo: 'Respeito aos jogadores',
+            r1_desc: 'Respeite todos os jogadores e membros da equipe. Ofensas, preconceito, discriminação e perseguição não serão tolerados.',
+            r2_titulo: 'Proibido Deathmatch',
+            r2_desc: 'Não mate outros jogadores sem uma justificativa válida dentro do contexto do servidor. Toda ação deve possuir uma motivação coerente.',
+            r3_titulo: 'Anti-RDM',
+            r3_desc: 'É proibido atacar ou eliminar jogadores aleatoriamente sem qualquer interação ou motivo válido.',
+            r4_titulo: 'Uso de veículos',
+            r4_desc: 'Utilize os veículos de forma coerente. Não utilize veículos para atropelar jogadores propositalmente ou obter vantagens injustas.',
+            r5_titulo: 'Exploração de bugs',
+            r5_desc: 'É proibido utilizar bugs, falhas ou exploits para obter vantagens dentro do servidor. Bugs encontrados devem ser comunicados à administração.',
+            r6_titulo: 'Cheats e programas externos',
+            r6_desc: 'Qualquer tipo de cheat, hack, script ou programa que ofereça vantagem injusta é estritamente proibido.',
+            r7_titulo: 'Uso do chat e voz',
+            r7_desc: 'Utilize os canais de comunicação corretamente. Evite spam, flood, divulgação não autorizada e conteúdo ofensivo.',
+            r8_titulo: 'Respeite a administração',
+            r8_desc: 'As decisões da equipe devem ser respeitadas. Caso discorde de alguma decisão, procure a administração pelos canais oficiais.',
             atencao: {
                 titulo: 'Atenção',
                 descricao: 'O desconhecimento das regras não isenta o jogador de punições. As regras podem ser atualizadas a qualquer momento pela administração.'
@@ -191,6 +207,22 @@ const traducoes = {
         en: {
             titulo: 'Rules',
             subtitulo: 'Know the server rules and maintain a good experience for all players.',
+            r1_titulo: 'Respect for players',
+            r1_desc: 'Respect all players and staff members. Offenses, prejudice, discrimination, and harassment will not be tolerated.',
+            r2_titulo: 'No Deathmatch',
+            r2_desc: 'Do not kill other players without a valid justification within the context of the server. Every action must have a coherent motivation.',
+            r3_titulo: 'Anti-RDM',
+            r3_desc: 'It is forbidden to randomly attack or eliminate players without any interaction or valid reason.',
+            r4_titulo: 'Vehicle usage',
+            r4_desc: 'Use vehicles coherently. Do not use vehicles to intentionally run over players or gain unfair advantages.',
+            r5_titulo: 'Bug exploitation',
+            r5_desc: 'It is forbidden to use bugs, glitches, or exploits to gain advantages within the server. Any bugs found must be reported to the administration.',
+            r6_titulo: 'Cheats and external programs',
+            r6_desc: 'Any type of cheat, hack, script, or program that provides an unfair advantage is strictly prohibited.',
+            r7_titulo: 'Chat and voice usage',
+            r7_desc: 'Use communication channels properly. Avoid spam, flood, unauthorized advertising, and offensive content.',
+            r8_titulo: 'Respect the administration',
+            r8_desc: 'Staff decisions must be respected. If you disagree with a decision, contact the administration through official channels.',
             atencao: {
                 titulo: 'Attention',
                 descricao: 'Lack of knowledge of the rules does not exempt the player from punishments. Rules may be updated at any time by the administration.'
